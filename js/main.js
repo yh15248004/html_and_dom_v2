@@ -1,3 +1,16 @@
+var _ = require('lodash');
+var AnswerFactory = require('./model/answer-factory');
+var CompletionTopic = require('./model/completion-topic');
+var RadioTopic = require('./model/radio-topic');
+var McqTopic = require('./model/mcq-topic');
+
+$(document).ready(function() {
+  $('#submit').on('click', function() {
+    submit_onclick();
+    return false; 
+  });
+});
+
 function submit_onclick() {
 
   var requiredInputs = [

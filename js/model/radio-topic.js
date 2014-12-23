@@ -1,3 +1,5 @@
+var _ = require('lodash');
+var Topic = require('./topic');
 function RadioTopic(name, answer, scoreUnit) {
   Topic.call(this, name, answer, scoreUnit);
 }
@@ -19,3 +21,5 @@ RadioTopic.prototype.calculate = function () {
   this.score = isRight ? this.scoreUnit : 0;
 
 };
+
+module.exports = RadioTopic;

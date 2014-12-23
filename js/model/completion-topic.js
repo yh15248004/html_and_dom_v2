@@ -1,3 +1,5 @@
+var _ = require('lodash');
+var Topic = require('./topic');
 function CompletionTopic(name, answer, scoreUnit) {
   Topic.call(this, name, answer, scoreUnit);
 }
@@ -23,3 +25,5 @@ CompletionTopic.prototype.calculate = function () {
   });
 
 };
+
+module.exports = CompletionTopic;

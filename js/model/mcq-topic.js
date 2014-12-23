@@ -1,3 +1,5 @@
+var _ = require('lodash');
+var Topic = require('./topic');
 function McqTopic(name, answer, scoreUnit) {
   Topic.call(this, name, answer, scoreUnit);
 }
@@ -14,3 +16,5 @@ McqTopic.prototype.calculate = function () {
     this.score = this.scoreUnit;
   }
 };
+
+module.exports = McqTopic;

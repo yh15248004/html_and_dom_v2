@@ -1,3 +1,4 @@
+var _ = require('lodash');
 function AnswerFactory(topics) {
   this.topics = topics;
 }
@@ -15,3 +16,5 @@ AnswerFactory.prototype.getTotalScore = function () {
     return scoreA + scoreB;
   });
 };
+
+module.exports = AnswerFactory;
